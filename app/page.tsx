@@ -1,6 +1,14 @@
 "use client";
 import { useEffect } from "react";
-import { About, Footer, Header, Hero, Services } from "./components";
+import {
+  About,
+  ContactUS,
+  Footer,
+  Header,
+  Hero,
+  Partners,
+  Services,
+} from "./components";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -25,6 +33,8 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <Partners />
+      <ContactUS />
       <Footer />
     </main>
   );

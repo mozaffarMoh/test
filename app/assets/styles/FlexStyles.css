@@ -79,6 +79,13 @@
     align-items: flex-start;
 }
 
+.flexEndColumnItemsEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 .flexStartColumnItemsCenter {
     display: flex;
     flex-direction: column;

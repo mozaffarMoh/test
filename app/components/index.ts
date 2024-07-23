@@ -1,6 +1,10 @@
 export { default as Header } from './Header/Header'
 export { default as Hero } from './Hero/Hero'
-export { default as Services } from './Services/Services'
 export { default as About } from './About/About'
+export { default as Services } from './Services/Services'
+export { default as Partners } from './Partners/Partners'
 export { default as Footer } from './Footer/Footer'
 export { default as ContactUS } from './ContactUS/ContactUS'
+export { default as ServicesDetails } from './ServicesDetails/ServicesDetails'
+export { default as ContactsField } from './ContactsField/ContactsField'
+
