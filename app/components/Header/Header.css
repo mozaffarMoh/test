@@ -1,0 +1,193 @@
+.header-container {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+
+    .social {
+        height: 50px;
+        z-index: 10;
+        background-color: white;
+
+        img {
+            margin: 15px 15px 0px 0px;
+        }
+    }
+
+    .header {
+        z-index: 10;
+        background-color: #3F485E;
+        padding: 25px 25px;
+        position: relative;
+
+        .logo-icon {
+            width: 180px;
+            height: 35px;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        .navigations {
+            font-size: 15px;
+            gap: 15px;
+
+            .navigations-item {
+                gap: 5px;
+
+
+                .links-selector {
+                    transition: all .5s ease;
+                    height: 2px;
+                    background-color: red;
+                    width: 0;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    a {
+                        color: red;
+                    }
+
+                    .links-selector {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .active-item {
+                a {
+                    color: red;
+                }
+
+                .links-selector {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .actions {
+            .select-lang-container {
+
+                .MuiInputBase-root {
+                    border: none !important;
+                }
+
+                .select-lang {
+                    width: 75px !important;
+                    font-size: 13px;
+                    margin: 3px 0px 0px 5px;
+
+
+                    * {
+                        color: white !important;
+                        padding: 2px !important;
+                        border: none;
+                    }
+                }
+            }
+
+            .buttons {
+
+                button {
+                    transition: all .5s ease;
+                    text-transform: capitalize;
+                    width: 127px;
+                    height: 48px;
+                    border-radius: 30px;
+                    background-color: white;
+                    border: 1px solid white;
+                    margin-left: 10px;
+                    color: #173E62;
+
+                    &:hover {
+                        background-color: #ffffffdd
+                    }
+                }
+
+                .login-button {
+                    background-color: transparent;
+                    color: white;
+
+                    &:hover {
+                        background-color: #00000044
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+/* Responsive */
+
+@media (max-width : 1080px) {
+    .header-container {
+        .header {
+            .logo-icon {
+                display: none;
+            }
+
+
+            .menu-icon {
+                display: block;
+            }
+
+
+            transition: all .5s ease;
+
+            .navigations {
+                position: absolute;
+                background-color: #313030;
+                border-radius: 10px;
+                width: 150px;
+                height: 0px;
+                overflow: hidden;
+                opacity: 0;
+                top: 65px;
+                left: 0px;
+                font-size: 15px;
+                transition: all 0.8s ease;
+            }
+
+            .show-navigations {
+                height: 240px;
+                opacity: 1;
+                flex-direction: column;
+            }
+
+            .actions {
+                .buttons {
+                    button {
+                        width: 100px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width : 600px) {
+    .header-container {
+        .header {
+            .actions {
+                .buttons {
+                    button {
+                        width: 80px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

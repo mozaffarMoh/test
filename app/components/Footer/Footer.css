@@ -1,0 +1,105 @@
+.footer {
+    background-color: #3F485E;
+    padding: 25px 25px;
+    text-align: center;
+    color: white;
+    gap: 20px;
+
+    .contact-email {
+
+        button,
+        input {
+            border-radius: 50px;
+            height: 50px;
+        }
+
+        input {
+            background-color: white;
+            padding: 20px;
+            padding-right: 50px;
+            border: none;
+            font-size: 15px;
+            width: 400px;
+
+            &:focus {
+                outline: none;
+            }
+
+        }
+
+        button {
+            position: relative;
+            border-radius: 50px;
+            width: 140px;
+            right: 40px;
+            background: #858585;
+            text-transform: capitalize;
+        }
+    }
+
+    .footer-icons {
+        width: 150px;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .footer-final {
+        width: 80%;
+
+        p {
+            font-size: 13px;
+        }
+
+        .MuiInputBase-root {
+            border: none;
+            width: 150px;
+            height: 40px;
+            background-color: #5b6274;
+            border-radius: 8px;
+
+            * {
+                color: white;
+            }
+
+        }
+
+
+    }
+}
+
+
+/* Responsive */
+@media (max-width : 600px) {
+
+    .footer {
+
+        .contact-email {
+
+            button,
+            input {
+                border-radius: 50px;
+                height: 50px;
+            }
+
+            input {
+                width: 250px;
+            }
+
+            button {
+                width: 100px;
+            }
+        }
+
+        .footer-final {
+            p {
+                font-size: 10px;
+            }
+
+            .MuiInputBase-root {
+                width: 100px;
+            }
+        }
+    }
+}
