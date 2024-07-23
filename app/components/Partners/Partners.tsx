@@ -29,11 +29,14 @@ const Partners = () => {
           </div>
         </div>
         <div className="partners-details-items flexCenter">
-          {details.map((item: any) => {
+          {details.map((item: any, i: number) => {
             return (
-              <div className="partners-details-item flexStartColumnItemsCenter">
+              <div
+                key={i}
+                className="partners-details-item flexStartColumnItemsCenter"
+              >
                 <Image src={item.image} alt="partnersImage" />
-                <hr  style={{width : '50%'}}/>
+                <hr style={{ width: "50%" }} />
                 <p>{item.title}</p>
               </div>
             );
