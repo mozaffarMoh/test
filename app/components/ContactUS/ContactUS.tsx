@@ -73,8 +73,8 @@ const ContactUS = () => {
                       )}
                       {item.dataType == "array" && (
                         <div className="data-array">
-                          {item.data.map((text: any) => {
-                            return <p>{text}</p>;
+                          {item.data.map((text: any, i: number) => {
+                            return <p key={i}>{text}</p>;
                           })}{" "}
                         </div>
                       )}
