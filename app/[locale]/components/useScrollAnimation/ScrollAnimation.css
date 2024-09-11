@@ -1,0 +1,21 @@
+.animationScroll {
+    background-image: url('/path/to/image1.png');
+    /* Replace with the actual path */
+    color: white;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+        transition: all 1s ease;
+        opacity: 0;
+        transform: rotate(20deg);
+    }
+}
+
+.animationScroll.visible {
+    h1 {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}

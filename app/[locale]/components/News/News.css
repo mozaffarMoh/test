@@ -1,0 +1,9 @@
+@media (max-width : 700px) {
+    .news-details-container {
+        flex-direction: column;
+    }
+
+    .news-navigations{
+        order: 1;
+    }
+}

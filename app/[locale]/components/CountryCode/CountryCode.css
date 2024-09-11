@@ -1,0 +1,12 @@
+/* custom-styles.css */
+
+.react-phone-input-2 .rpi_dropdown {
+    margin-top: -50px !important; /* Adjust as needed */
+    /* You can also use other styles such as position, background-color, etc. */
+  }
+  
+  .react-phone-input-2 .rpi_dropdown ul {
+    border-radius: 0px; /* Example of changing border-radius */
+    /* Customize other styles as needed */
+  }
+  
