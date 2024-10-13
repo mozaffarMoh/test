@@ -1,0 +1,13 @@
+
+.custom-button::before {
+    content: " →";
+    color: green;
+    margin-right: 10px;
+}
+
+.custom-button::after {
+    content: "✔ ";
+    color:red;
+    margin-left: 10px;
+    /* Adds space between checkmark and text */
+}

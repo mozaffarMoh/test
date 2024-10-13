@@ -1,19 +1,24 @@
 "use client";
-import { Stack } from "@mui/material";
+import {
+  Stack,
+  Drawer,
+  Button,
+  Box,
+  Typography,
+  Menu,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Select,
+  FormHelperText,
+} from "@mui/material";
 import "./page.css";
-import FlexBoxImages from "./components/FlexBoxImages/FlexBoxImages";
-import ScrollAnimation from "./components/useScrollAnimation/ScrollAnimation";
+import ImageClassifier from "./components/ImageClassifier/ImageClassifier";
 
 export default function HomePage() {
   return (
-    <Stack
-      direction={"row"}
-      flexWrap={"wrap"}
-      justifyContent={"space-between"}
-      bgcolor={"black"}
-    >
-      <h1>Test</h1>
-      <ScrollAnimation />
+    <Stack bgcolor={"#76C2D6"}>
+      <ImageClassifier />
     </Stack>
   );
 }
