@@ -8,13 +8,18 @@ const ImageClassifier: React.FC = () => {
   const [model, setModel] = useState<mobilenet.MobileNet | null>(null);
   const [image, setImage] = useState<string | null>(null);
   const [prediction, setPrediction] = useState<string | null>(null);
+
+  const initializeModel = async () => {
+    const model = await mobilenet.load({
+      version: 1,
+      modelUrl:
+        "https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0/model.json",
+    });
+    setModel(model);
+  };
+
   useEffect(() => {
     tf.setBackend("wasm");
-    const initializeModel = async () => {
-      const newModel = await mobilenet.load(); // Load the pre-trained MobileNet model
-
-      setModel(newModel);
-    };
     initializeModel();
   }, []);
 
@@ -32,6 +37,8 @@ const ImageClassifier: React.FC = () => {
 
   // Handle the prediction using the uploaded image
   const handlePredict = async () => {
+    console.log("not exist", model, image);
+
     if (model && image) {
       console.log("loading...");
       const imgElement = document.getElementById(
@@ -62,9 +69,13 @@ const ImageClassifier: React.FC = () => {
       {image && (
         <img id="uploadedImage" src={image} alt="Uploaded" width="200" />
       )}
+      <Button variant="contained" onClick={initializeModel}>
+        initialize Model
+      </Button>
       <Button variant="contained" onClick={handlePredict}>
         Predict
       </Button>
+
       <div>
         Predicted Class:
         {prediction !== null ? (

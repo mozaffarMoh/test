@@ -1,24 +1,26 @@
 "use client";
-import {
-  Stack,
-  Drawer,
-  Button,
-  Box,
-  Typography,
-  Menu,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  Select,
-  FormHelperText,
-} from "@mui/material";
+import { Stack } from "@mui/material";
 import "./page.css";
-import ImageClassifier from "./components/ImageClassifier/ImageClassifier";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ApiRequest from "./components/ApiRequest";
 
-export default function HomePage() {
+const page = () => {
+  const queryClient = new QueryClient();
   return (
-    <Stack bgcolor={"#76C2D6"}>
-      <ImageClassifier />
-    </Stack>
+    <QueryClientProvider client={queryClient}>
+      <Stack
+        justifyContent={"center"} 
+        alignItems={"center"} 
+        bgcolor={"#bbb"}
+        width={"100%"}
+        height={"100vh"}
+      >
+        {/* <ExportToExcel /> */}
+        {/*  <Emoji icon={emojiIcons.sun} size={100} /> */}
+        <ApiRequest />
+      </Stack>
+    </QueryClientProvider>
   );
-}
+};
+
+export default page;

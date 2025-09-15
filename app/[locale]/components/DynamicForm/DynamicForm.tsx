@@ -107,7 +107,7 @@ const DynamicForm = () => {
   }, []);
 
   const onClick = (data: any) => {
-    console.log(data);
+    console.log('data : ',data);
 
     /*     const formData = new FormData();
     formData.append("form_field_id", "12");
@@ -140,7 +140,7 @@ const DynamicForm = () => {
 
   return (
     <Stack alignItems={"center"} gap={2}>
-      <Typography color={"#44f4f4"}>Dynamic Form</Typography>
+      <Typography color={"#f00"}>Dynamic Form</Typography>
       <form onSubmit={handleSubmit(onClick)} style={{ width: "100%" }}>
         <Stack gap={2} alignItems={"flex-start"}>
           {formArray.map((item: any) => {
@@ -180,7 +180,7 @@ const DynamicForm = () => {
           })}
           <Button fullWidth variant="contained" type="submit">
             Submit
-          </Button>{" "}
+          </Button>{" "}    
         </Stack>
       </form>
     </Stack>
